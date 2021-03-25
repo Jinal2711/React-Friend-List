@@ -1,12 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
-import {
-  FormControl,
-  InputGroup,
-  ListGroup,
-  Button,
-  Modal,
-  Form,
-} from "react-bootstrap";
+import React, { useMemo, useState } from "react";
 import List from "./List";
 import AddFriendModal from "./AddFriendModal";
 import FilterToolBar from "./FilterToolBar";
@@ -42,7 +34,7 @@ function FriendList() {
 
   const deleteFriend = (id) => {
     let copyFriends = [...friendList];
-    const index = copyFriends.findIndex((friend) => friend.id == id);
+    const index = copyFriends.findIndex((friend) => friend.id === id);
     copyFriends.splice(index, 1);
     setFriendList(copyFriends);
   };
